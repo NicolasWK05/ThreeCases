@@ -90,15 +90,8 @@ namespace ThreeCases
 
         bool CapitalLetters(string pass)
         {
-            bool lowerCase = false;
-            bool upperCase = false;
-            for(int i = 0; i < pass.Length; i++)
-            {
-                if (Char.IsLower(pass[i])) lowerCase = true;
-                else upperCase = true;
-            }
-            if(lowerCase && upperCase) return true;
-            return false;
+            if (pass.ToUpper() == pass || pass.ToLower() == pass) return false;
+            return true;
         }
 
         bool SpecialCharacters(string pass)
